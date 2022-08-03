@@ -4,7 +4,7 @@ Need a quick place to store some data? Toss a few CSV files into a directory and
 
 ## Usage
 
-Make a directory in your project called `data` or whatever you like. Put any number of CSV files into this new directory. Each CSV is a database table. They should be formatted like this:
+Make a directory in your project called `data` or whatever you like. Put any number of CSV files into this new directory. These CSVs are your database tables. They should be formatted like this:
 
 ```csv
 id,name,created
