@@ -105,13 +105,16 @@ function db() {
   // read all files in input dir
   const data_directory = arguments[0] || 'data';
 
+  console.log('Initializing DB in directory ', data_directory)
+
   // get all the files in the target directory
-  const files = fs.readdirSync(data_directory, 'utf-8').map(fname => (
-    {
-      path: path.join(__dirname, data_directory, fname),
+  const dataFiles = fs.readdirSync(data_directory, 'utf-8');
+  const files = dataFiles.map(fname => {
+    return {
+      path: path.join(data_directory, fname),
       model: fname.split('.csv')[0]
     }
-  ));
+  });
 
   const obj = {};
 
